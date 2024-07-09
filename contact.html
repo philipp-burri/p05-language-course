@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eLingo</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="course-style.css">
-    <link rel="stylesheet" href="contact-style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/course-style.css">
+    <link rel="stylesheet" href="css/contact-style.css">
     <link rel="icon" type="image/x-icon" href="image_o6_ASusv_1718183876203_raw-removebg-preview (1).png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script src="js/validation.js"></script>
+
 </head>
 <body>
     
     <header>
         <div class="logo">
-            <img src="image_o6_ASusv_1718183876203_raw-removebg-preview (1).png" alt="">
+          <a href="index.html"><img src="/images/image_o6_ASusv_1718183876203_raw-removebg-preview (1).png" alt=""></a>
         </div>
         <div class="header-text">
             <h2 class="h2header">eLingo</h2>
@@ -44,7 +47,7 @@
          
       </div>
         <div class="form-image">
-        <img src="money-back-guarantee.png" alt="">
+        <img src="/images/money-back-guarantee.png" alt="">
       </div>
     </div>
       
@@ -83,8 +86,7 @@
           <input type="date" id="start-date" name="start-date" required>
         </div>
         <button type="submit">SIGN UP</button>
-      </form>
-      
+      </form> 
     </div>
 
 
@@ -96,7 +98,7 @@
 
     <footer>
         <div class="logo-section">
-            <img src="image_o6_ASusv_1718183876203_raw-removebg-preview (1).png" alt="">
+            <img src="/images/image_o6_ASusv_1718183876203_raw-removebg-preview (1).png" alt="">
             <h2 class="footer-name">eLingo</h2>
 
         </div>
@@ -111,67 +113,10 @@
     
     
      </section>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 
 
 
-
-    <script>
-
-      
-      // greift sprache vom local storage
-      let selectedLanguage = localStorage.getItem("selectedLanguage");
-      // greift kurs vom local storage
-      let selectedCourse = localStorage.getItem("selectedCourse");
-      
-      
-      // display contact page language
-      let languageElement = document.getElementById("selected-language");
-      if (selectedLanguage) {
-        languageElement.textContent = selectedLanguage;
-      }
-          // display contact course
-      let courseElement = document.getElementById("selected-course");
-      if (selectedCourse) {
-        courseElement.textContent = selectedCourse.trim();
-      }
-      
-      
-  
-
-  let contactForm = document.getElementById("contact-form");
-  contactForm.addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    // variable definition contact page
-    let firstName = document.getElementById("first-name").value;
-    let lastName = document.getElementById("last-name").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-    let languageLevel = document.getElementById("language-level").value;
-    let startDate = document.getElementById("start-date").value;
-
-
-
-    // speichert daten in local storage
-    localStorage.setItem("firstName", firstName);
-    localStorage.setItem("lastName", lastName);
-    localStorage.setItem("email", email);
-    localStorage.setItem("phone", phone);
-    localStorage.setItem("languageLevel", languageLevel);
-    localStorage.setItem("startDate", startDate);
-
-    // umleitung success page
-    window.location.href = "success.html";
-  });
-
-
-
-  /*   let todaysDate = new Date();
-    if(inputDate.setHours(0,0,0,0)== todaysDate.setHours(0,0,0,0)){
-
-    } */
-    </script>
 
 
     </body>
